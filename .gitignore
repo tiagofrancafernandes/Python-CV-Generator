@@ -1,0 +1,6 @@
+no*commit
+*.docx
+*.pdf
+*.log
+curriculum_data.json
+!curriculum_data.example.json
