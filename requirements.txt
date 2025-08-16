@@ -1,0 +1,4 @@
+docx
+python-docx
+lxml
+pillow
