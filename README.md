@@ -39,6 +39,6 @@ python3 ./main.py
 
 ## ROADMAP
 
-- [] supports data from JSON file
-- [] supports multi language
-- [] auto release final file
+- [ ] supports data from JSON file
+- [ ] supports multi language
+- [ ] auto release final file
