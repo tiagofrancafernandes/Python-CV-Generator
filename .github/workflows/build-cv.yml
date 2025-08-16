@@ -1,0 +1,49 @@
+name: Build and Release CV DOCX
+
+on:
+  push:
+    branches: [wip-gh-action-releases]
+  release:
+    types: [created]
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-docx lxml pillow
+
+      - name: Generate CV DOCX files
+        run: |
+          python main.py
+
+      - name: Upload DOCX as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-docx-files
+          path: output/*.docx
+
+  release-cv:
+    needs: build-cv
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cv-docx-files
+          path: output
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: output/*.docx
