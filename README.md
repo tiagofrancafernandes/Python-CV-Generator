@@ -1,3 +1,7 @@
+[![Build and Release CV DOCX](https://github.com/tiagofrancafernandes/Python-CV-Generator/actions/workflows/build-cv.yml/badge.svg)](https://github.com/tiagofrancafernandes/Python-CV-Generator/actions/workflows/build-cv.yml)
+
+-----
+
 # Python CV Generator
 
 > Projeto criado para demonstrar uma aplicação em Python e implementar evoluções mesmo Python não sendo uma de minhas tecnologias principais.
