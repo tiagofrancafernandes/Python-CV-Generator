@@ -34,3 +34,11 @@ python3 ./main.py
 ```sh
 ./generate-cv.sh
 ```
+
+-----
+
+## ROADMAP
+
+- [] supports data from JSON file
+- [] supports multi language
+- [] auto release final file
