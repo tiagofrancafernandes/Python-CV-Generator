@@ -51,7 +51,7 @@ jobs:
       - name: Set up authenticated remote
         run: |
             echo "date=$(date -u +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
-            # git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
+            git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
 
       - name: Get current date and time for tag
         id: tag
