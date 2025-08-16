@@ -1,5 +1,11 @@
 # Python CV Generator
 
+> Projeto criado para demonstrar uma aplicação em Python e implementar evoluções mesmo Python não sendo uma de minhas tecnologias principais.
+>
+> Mais projetos em https://github.com/ministracao-aulas/
+>
+> Versão resumida em https://github.com/ministracao-aulas/Python-CV-Generator
+
 
 ## Commands
 
@@ -15,11 +21,25 @@ python3 -m venv ./venv
 export PATH=$(realpath ./venv/bin/):$PATH
 ```
 
+Or load venv running:
+
+```sh
+source ./load-env.sh
+```
+
 ### Install requirements
 
 ```sh
 pip install -r requirements.txt
 ```
+
+### Copy JSON data example file
+
+```sh
+cp curriculum_data.example.json curriculum_data.json
+```
+
+- Edit the `curriculum_data.json` file with your info.
 
 ### Generate file
 
@@ -37,8 +57,12 @@ python3 ./main.py
 
 -----
 
+## [CHANGELOG](./CHANGELOG.md)
+
+-----
+
 ## ROADMAP
 
-- [ ] supports data from JSON file
-- [ ] supports multi language
+- [x] supports data from JSON file
+- [x] supports multi language
 - [ ] auto release final file

@@ -40,19 +40,6 @@ _install_requirements() {
     fi
 }
 
-_generate_file() {
-    python3 "${MAIN_SCRIPT_PATH}"
-
-    if [ $? -eq 0 ]; then
-        echo -e "\nCV file generated successfully!\n"
-        echo -e "Files on output dir:\n"
-        find "${OUTPUT_DIR}" -type f -name '*.docx'
-    else
-        echo -e "\nFail on generate CV file\n"
-        exit 5;
-    fi
-}
-
 _init_env
 _install_requirements
 
