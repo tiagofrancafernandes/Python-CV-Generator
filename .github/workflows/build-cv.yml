@@ -48,6 +48,10 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
+    #   - name: Set up authenticated remote
+    #     run: |
+    #       git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
+
       - name: Get current date and time for tag
         id: tag
         run: |
@@ -72,4 +76,4 @@ jobs:
           name: Release ${{ steps.tag.outputs.tag }}
           files: output/*.docx
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
