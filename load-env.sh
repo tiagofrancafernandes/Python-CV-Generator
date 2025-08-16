@@ -19,8 +19,9 @@ _init_env() {
     if _command_exists python3; then
         python3 -m venv ${VENV_DIR}
         if [ $? -eq 0 ]; then
-            # echo "Inited python venv"
-            export PATH="${VENV_BIN_DIR}:${PATH}"
+            echo "Inited python venv"
+            # export PATH="${VENV_BIN_DIR}:${PATH}"
+            source "${VENV_BIN_DIR}/activate"
         else
             echo "Error on init python venv"
             exit 5

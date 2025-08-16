@@ -5,7 +5,10 @@
 > Mais projetos em https://github.com/ministracao-aulas/
 >
 > Versão resumida em https://github.com/ministracao-aulas/Python-CV-Generator
-
+>
+> Me reservo o direito de errar kk afinal não sou especialista Python, mas aceito de bom grado sugestões e issues. Desde já, obrigado.
+>
+> Nota: mantive as chaves e variáveis em português mesmo para fim de demonstração e para evitar confusão à quem era demonstrado.
 
 ## Commands
 
