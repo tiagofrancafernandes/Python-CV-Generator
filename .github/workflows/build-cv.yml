@@ -26,7 +26,7 @@ jobs:
       - name: Generate CV DOCX files
         run: |
           #python main.py
-          generate-cv.sh
+          ${{ github.workspace }}/generate-cv.sh
 
       - name: Upload DOCX as artifact
         uses: actions/upload-artifact@v4
